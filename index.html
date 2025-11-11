@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="hero">
+        <h1>Ignite Your Fitness Journey</h1>
+        <p>The premier gym management system and fitness center dedicated to your success.</p>
+        <a href="{{ url_for('membership') }}" class="cta-button">View Our Plans</a>
+    </div>
+
+    <h2>Our Core Strengths</h2>
+    <div class="plans-grid">
+        <section class="plan-card">
+            <h3>Cutting-Edge Equipment</h3>
+            <p>Access the latest machines and free weights for a superior workout experience, monitored by our system.</p>
+        </section>
+        <section class="plan-card">
+            <h3>Certified Trainers</h3>
+            <p>Personalized training programs designed by experts to help you reach your goals faster and safer.</p>
+        </section>
+        <section class="plan-card">
+            <h3>Community Focus</h3>
+            <p>Join a supportive environment with flexible class schedules and motivating challenges.</p>
+        </section>
+    </div>
+{% endblock %}

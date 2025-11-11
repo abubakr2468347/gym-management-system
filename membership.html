@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Choose Your Path to Fitness</h2>
+
+    <section class="plans-grid">
+        {% for plan in plans %}
+        <div class="plan-card">
+            <h3>{{ plan.name }}</h3>
+            <p class="price">${{ plan.price }}/mo</p>
+            <ul>
+                {% for feature in plan.features %}
+                    <li>{{ feature }}</li>
+                {% endfor %}
+            </ul>
+            <a href="#" class="cta-button">Sign Up</a>
+        </div>
+        {% endfor %}
+    </section>
+
+    <section class="content-section" style="margin-top: 40px;">
+        <h3>Corporate & Family Plans</h3>
+        <p>We offer discounted packages for local businesses and large groups. Contact us for a customized quote!</p>
+    </section>
+{% endblock %}

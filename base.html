@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymPro - {{ page_title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo"><a href="{{ url_for('home') }}">GymPro</a></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}" class="{% if active_page == 'home' %}active{% endif %}">Home</a></li>
+                <li><a href="{{ url_for('about') }}" class="{% if active_page == 'about' %}active{% endif %}">About Us</a></li>
+                <li><a href="{{ url_for('membership') }}" class="{% if active_page == 'membership' %}active{% endif %}">Membership</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 GymPro Management System. Powered by Flask.</p>
+    </footer>
+</body>
+</html>
